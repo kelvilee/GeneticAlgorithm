@@ -84,6 +84,36 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/City.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/GenericAlgorithm.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/GenericAlgorithm.hpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/Population.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/Population.hpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/Tour.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/Tour.hpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.hpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
 		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/main.cpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
