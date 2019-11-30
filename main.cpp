@@ -1,22 +1,16 @@
 #include <iostream>
-#include "Tour.hpp"
-#include "Population.hpp"
+#include "GeneticAlgorithm.hpp"
 
 int main() {
-//    vector<City> master_list;
-//    master_list.emplace_back("Vancouver", 0, 0);
-//    master_list.emplace_back("Surrey", 222, 495);
-//    master_list.emplace_back("Burnaby", 140, 497);
-//    master_list.emplace_back("Richmond", 373, 655);
-    TourManager tourManager;
-    City* city1 = new City("Van", 60, 200);
-    tourManager.addCity(city1);
-    City* city2 = new City("Bby", 180, 200);
-    tourManager.addCity(city2);
-    City* city3 = new City("Surrey", 80, 180);
-    tourManager.addCity(city3);
+    // group of cities (master list)
+    vector<City*> master_list;
+    master_list.push_back(new City("Vancouver", 67, 234));
+    master_list.push_back(new City("Burnaby", 184, 211));
+    master_list.push_back(new City("Surrey", 83, 182));
+    master_list.push_back(new City("New West", 405, 12));
+    master_list.push_back(new City("Port Coquitlam", 803, 302));
 
-    Population* population = new Population(32, true);
-    cout << "Initial distance: " << population->getFittest()->getDistance();
+    GeneticAlgorithm ga{master_list};
+
     return 0;
 }

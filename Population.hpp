@@ -5,18 +5,24 @@
 #pragma once
 
 #include "Tour.hpp"
-#include <set>
+#include <algorithm>
+#include <random>
 
 constexpr int POPULATION_SIZE = 32;
+constexpr int PARENT_POOL_SIZE = 5;
+//constexpr int
 class Population
 {
 private:
-    vector<Tour*> tours{POPULATION_SIZE, nullptr};
+    vector<Tour*> tours;
 public:
-    Population(int popSize, bool init);
+    Population(vector<City*>& seed);
     void saveTour(int index, Tour* tour);
+    void selectElite();
+//    void crossover();
+    int getPopSize() { return tours.size(); }
     Tour* getTour(int index) { return tours.at(index); }
     Tour* getFittest();
-    int populationSize() { return tours.size(); }
+    string printPopulation();
     ~Population();
 };

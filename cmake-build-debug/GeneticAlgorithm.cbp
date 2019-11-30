@@ -90,10 +90,10 @@
 		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/GenericAlgorithm.cpp">
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.cpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
-		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/GenericAlgorithm.hpp">
+		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.hpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/Population.cpp">
@@ -106,12 +106,6 @@
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/Tour.hpp">
-			<Option target="GeneticAlgorithm"/>
-		</Unit>
-		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.cpp">
-			<Option target="GeneticAlgorithm"/>
-		</Unit>
-		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.hpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/Users/kelvin/CLionProjects/GeneticAlgorithm/main.cpp">

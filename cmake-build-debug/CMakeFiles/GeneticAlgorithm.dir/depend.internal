@@ -4,31 +4,24 @@
 CMakeFiles/GeneticAlgorithm.dir/City.cpp.o
  /Users/kelvin/CLionProjects/GeneticAlgorithm/City.cpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp
-CMakeFiles/GeneticAlgorithm.dir/GenericAlgorithm.cpp.o
+CMakeFiles/GeneticAlgorithm.dir/GeneticAlgorithm.cpp.o
  /Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp
- /Users/kelvin/CLionProjects/GeneticAlgorithm/GenericAlgorithm.cpp
- /Users/kelvin/CLionProjects/GeneticAlgorithm/GenericAlgorithm.hpp
+ /Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.cpp
+ /Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.hpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Population.hpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Tour.hpp
- /Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.hpp
 CMakeFiles/GeneticAlgorithm.dir/Population.cpp.o
  /Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Population.cpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Population.hpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Tour.hpp
- /Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.hpp
 CMakeFiles/GeneticAlgorithm.dir/Tour.cpp.o
  /Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Tour.cpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Tour.hpp
- /Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.hpp
-CMakeFiles/GeneticAlgorithm.dir/TourManager.cpp.o
- /Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp
- /Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.cpp
- /Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.hpp
 CMakeFiles/GeneticAlgorithm.dir/main.cpp.o
  /Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp
+ /Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.hpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Population.hpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/Tour.hpp
- /Users/kelvin/CLionProjects/GeneticAlgorithm/TourManager.hpp
  /Users/kelvin/CLionProjects/GeneticAlgorithm/main.cpp

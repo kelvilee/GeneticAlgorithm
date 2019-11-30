@@ -150,32 +150,32 @@ City.cpp.s:
 	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/City.cpp.s
 .PHONY : City.cpp.s
 
-GenericAlgorithm.o: GenericAlgorithm.cpp.o
+GeneticAlgorithm.o: GeneticAlgorithm.cpp.o
 
-.PHONY : GenericAlgorithm.o
+.PHONY : GeneticAlgorithm.o
 
 # target to build an object file
-GenericAlgorithm.cpp.o:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/GenericAlgorithm.cpp.o
-.PHONY : GenericAlgorithm.cpp.o
+GeneticAlgorithm.cpp.o:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/GeneticAlgorithm.cpp.o
+.PHONY : GeneticAlgorithm.cpp.o
 
-GenericAlgorithm.i: GenericAlgorithm.cpp.i
+GeneticAlgorithm.i: GeneticAlgorithm.cpp.i
 
-.PHONY : GenericAlgorithm.i
+.PHONY : GeneticAlgorithm.i
 
 # target to preprocess a source file
-GenericAlgorithm.cpp.i:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/GenericAlgorithm.cpp.i
-.PHONY : GenericAlgorithm.cpp.i
+GeneticAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/GeneticAlgorithm.cpp.i
+.PHONY : GeneticAlgorithm.cpp.i
 
-GenericAlgorithm.s: GenericAlgorithm.cpp.s
+GeneticAlgorithm.s: GeneticAlgorithm.cpp.s
 
-.PHONY : GenericAlgorithm.s
+.PHONY : GeneticAlgorithm.s
 
 # target to generate assembly for a file
-GenericAlgorithm.cpp.s:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/GenericAlgorithm.cpp.s
-.PHONY : GenericAlgorithm.cpp.s
+GeneticAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/GeneticAlgorithm.cpp.s
+.PHONY : GeneticAlgorithm.cpp.s
 
 Population.o: Population.cpp.o
 
@@ -231,33 +231,6 @@ Tour.cpp.s:
 	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/Tour.cpp.s
 .PHONY : Tour.cpp.s
 
-TourManager.o: TourManager.cpp.o
-
-.PHONY : TourManager.o
-
-# target to build an object file
-TourManager.cpp.o:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/TourManager.cpp.o
-.PHONY : TourManager.cpp.o
-
-TourManager.i: TourManager.cpp.i
-
-.PHONY : TourManager.i
-
-# target to preprocess a source file
-TourManager.cpp.i:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/TourManager.cpp.i
-.PHONY : TourManager.cpp.i
-
-TourManager.s: TourManager.cpp.s
-
-.PHONY : TourManager.s
-
-# target to generate assembly for a file
-TourManager.cpp.s:
-	$(MAKE) -f CMakeFiles/GeneticAlgorithm.dir/build.make CMakeFiles/GeneticAlgorithm.dir/TourManager.cpp.s
-.PHONY : TourManager.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -297,18 +270,15 @@ help:
 	@echo "... City.o"
 	@echo "... City.i"
 	@echo "... City.s"
-	@echo "... GenericAlgorithm.o"
-	@echo "... GenericAlgorithm.i"
-	@echo "... GenericAlgorithm.s"
+	@echo "... GeneticAlgorithm.o"
+	@echo "... GeneticAlgorithm.i"
+	@echo "... GeneticAlgorithm.s"
 	@echo "... Population.o"
 	@echo "... Population.i"
 	@echo "... Population.s"
 	@echo "... Tour.o"
 	@echo "... Tour.i"
 	@echo "... Tour.s"
-	@echo "... TourManager.o"
-	@echo "... TourManager.i"
-	@echo "... TourManager.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

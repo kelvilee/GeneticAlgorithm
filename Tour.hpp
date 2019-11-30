@@ -5,32 +5,27 @@
 #pragma once
 #include <vector>
 #include <random>
-#include "TourManager.hpp"
+
+#include "City.hpp"
+
 constexpr int CITIES_IN_TOUR = 32;
 
 using namespace std;
 class Tour
 {
 private:
-    vector<City*> tour;
-    double fitness_rating;
-    double distance;
+    vector<City*> tour; //list of cities
+    double fitness = 0;
+    double distance = 0;
 
 public:
-    Tour();
-    ~Tour() { };
-    Tour(const vector<City*>& master_list);
+    Tour(const vector<City*>& newTour);
     void generateTour();
-    City* getCity(int pos);
+    City getCity(int pos);
     double getFitness();
     void setCity(int pos, City* city);
-    bool operator < (const Tour& t) const;
-    bool operator == (const Tour& t) const;
     double getDistance();
-    string to_string() {
-        string result = "|";
-        for(int i = 0; i < CITIES_IN_TOUR; ++i)
-            result += getCity(i)->to_string() + "|";
-        return result;
-    }
+    string to_string();
+    Tour& operator=(Tour other);
+    friend void mySwap(Tour& first, Tour& second);
 };
