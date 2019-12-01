@@ -4,35 +4,30 @@
 
 #include "Tour.hpp"
 
-#include <random>
-
-void Tour::generateTour() {
-    shuffle(tour.begin(), tour.end(), std::mt19937(std::random_device()()));
-}
 
 double Tour::getDistance() {
     if (distance == 0) {
         double tourDistance = 0;
         for (int i = 0; i < tour.size(); ++i) {
-            City fromCity = getCity(i);
-            City destCity;
+            City* fromCity = getCity(i);
+            City* destCity;
             if (i + 1 < tour.size())
                 destCity = getCity(i + 1);
             else
                 destCity = getCity(0);
-            tourDistance += fromCity.distanceTo(destCity);
+            tourDistance += fromCity->distanceTo(*destCity);
         }
         distance = tourDistance;
     }
     return distance;
 }
 
-City Tour::getCity(int pos) {
-    return *tour.at(pos);
+City * Tour::getCity(int pos) {
+    return tour.at(pos);
 }
 
 void Tour::setCity(int pos, City* city) {
-    tour.assign(pos, city);
+    tour[pos] = city;
     fitness = 0;
     distance = 0;
 }
@@ -46,7 +41,7 @@ double Tour::getFitness() {
 string Tour::to_string() {
     string result = "| ";
     for (int i = 0; i < tour.size(); ++i)
-        result += getCity(i).to_string() + " | ";
+        result += getCity(i)->to_string() + " | ";
     return result;
 }
 
@@ -56,14 +51,10 @@ Tour::Tour(const vector<City *>& newTour) : tour(newTour) {
     fitness = getFitness();
 }
 
-Tour &Tour::operator=(Tour other) {
-    mySwap(*this, other);
-    return *this;
-}
-
-void mySwap(Tour &first, Tour &second) {
-    first.tour.swap(second.tour);
-    using std::swap;
-    swap(first.fitness, second.fitness);
-    swap(first.distance, second.fitness);
+bool Tour::containsCity(const City* input) {
+    for(City* c: tour)
+        if(c != nullptr)
+            if(c->name == input->name)
+                return true;
+    return false;
 }

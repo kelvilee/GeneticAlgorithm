@@ -18,4 +18,5 @@ struct City
     City(string name, int x, int y) : name(name), x(x), y(y) { }
     double distanceTo(const City& dest);
     string to_string();
+    bool operator == (const City& m) const;
 };

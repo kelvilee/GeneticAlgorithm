@@ -6,14 +6,18 @@
 #define GENETICALGORITHM_GENETICALGORITHM_HPP
 
 #include "Population.hpp"
-#include <set>
+
 constexpr int ITERATIONS = 1000;
+constexpr double MUTATION_RATE = 0.15;
+constexpr double IMPROVEMENT_FACTOR = 0.25;
+
 class GeneticAlgorithm
 {
 private:
     vector<City*> masterList;
 public:
-    GeneticAlgorithm(const vector<City*>& inputList);
-    void crossover(Population original);
+    explicit GeneticAlgorithm(const vector<City*>& inputList);
+    Tour* crossover(Population original);
+    void mutation(Population original);
 };
 #endif //GENETICALGORITHM_GENETICALGORITHM_HPP
