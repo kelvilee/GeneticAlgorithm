@@ -80,7 +80,7 @@ Tour* GeneticAlgorithm::crossover(Population original) {
     mt19937 gen(rd());
     uniform_int_distribution<> intDist(1, original.getPopSize() - 1); // don't include elite tour in crossover
 
-    // each tour in set is unique? TODO check for uniqueness
+    // each tour in set is unique
     while(set1.size() < PARENT_POOL_SIZE) {
         int randomInt1 = intDist(gen);
         set1.push_back(original.getTour(randomInt1));
