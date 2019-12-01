@@ -14,5 +14,9 @@ int main() {
     // apply genetic algorithm for TSP
     GeneticAlgorithm ga{master_list};
 
+    // free memory
+    for(City* c: master_list) {
+        delete c;
+    }
     return 0;
 }

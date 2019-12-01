@@ -14,10 +14,6 @@ iostream
 cmath
 -
 
-/Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.cpp
-GeneticAlgorithm.hpp
-/Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.hpp
-
 /Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.hpp
 Population.hpp
 /Users/kelvin/CLionProjects/GeneticAlgorithm/Population.hpp
@@ -37,4 +33,10 @@ random
 -
 City.hpp
 /Users/kelvin/CLionProjects/GeneticAlgorithm/City.hpp
+
+/Users/kelvin/CLionProjects/GeneticAlgorithm/main.cpp
+iostream
+-
+GeneticAlgorithm.hpp
+/Users/kelvin/CLionProjects/GeneticAlgorithm/GeneticAlgorithm.hpp
 
