@@ -4,6 +4,10 @@
 
 #include "Population.hpp"
 
+/**
+ * Constructor to build a population given a seed tour
+ * @param seed tour to create population from
+ */
 Population::Population(vector<City*> &seed) {
     for(int i = 0; i < POPULATION_SIZE; ++i) {
         Tour* newTour = new Tour(seed); // creating shuffles
@@ -11,10 +15,19 @@ Population::Population(vector<City*> &seed) {
     }
 }
 
+/**
+ * Save tour in a population given a specific position and tour
+ * @param index position of save
+ * @param tour tour to set
+ */
 void Population::saveTour(int index, Tour* tour) {
     tours.at(index) = tour;
 }
 
+/**
+ * Gets the fittest tour in the population
+ * @return pointer to fittest tour
+ */
 Tour* Population::getFittest() {
     Tour* fittest = tours.at(0);
     for(int i = 0; i < tours.size(); ++i)
@@ -23,6 +36,9 @@ Tour* Population::getFittest() {
     return fittest;
 }
 
+/**
+ * Selects elite tour and moves to front of population
+ */
 void Population::selectElite() {
     Tour* fittest = tours.at(0);
     int index = 0;
@@ -33,4 +49,3 @@ void Population::selectElite() {
         }
     std::swap(tours[0], tours[index]);
 }
-

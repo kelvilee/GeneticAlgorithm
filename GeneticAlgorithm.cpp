@@ -4,11 +4,16 @@
 
 #include "GeneticAlgorithm.hpp"
 
+/**
+ * Runs a genetic algorithm to find an improved path to the travelling salesman problem
+ * @param inputList list of cities to perform TSP on
+ */
 GeneticAlgorithm::GeneticAlgorithm(const vector<City*>& inputList) : masterList(inputList){
     // CREATE CITIES
-    Population pop{masterList};
-    // EVALUATE CITY'S FITNESS
-    Tour* fittest = pop.getFittest();
+    auto *pop = new Population(masterList);
+
+    // EVALUATE FITNESS
+    Tour* fittest = pop->getFittest();
     const double base_distance = fittest->getDistance();
     double best_distance = base_distance;
     int iterCount = 0;
@@ -17,15 +22,15 @@ GeneticAlgorithm::GeneticAlgorithm(const vector<City*>& inputList) : masterList(
     // Run the genetic algorithm
     while(1 - (best_distance / base_distance) < IMPROVEMENT_FACTOR && iterCount < ITERATIONS) {
         // MOVE ELITE TO FRONT
-        pop.selectElite();
+        pop->selectElite();
         // PERFORM CROSSOVER
         for(int i = 1; i < POPULATION_SIZE; ++i) {
-            pop.saveTour(i, crossover(pop));
+            pop->saveTour(i, crossover(*pop));
         }
         // PERFORM MUTATION
-        mutation(pop);
-        // EVALUATE CITY'S FITNESS
-        Tour* newFittest = pop.getFittest();
+        mutation(*pop);
+        // EVALUATE FITNESS
+        Tour* newFittest = pop->getFittest();
         double iterDistance = newFittest->getDistance();
         //if distance is improved over best distance, update best distance and set improvement
         if(iterDistance < best_distance) {
@@ -34,6 +39,7 @@ GeneticAlgorithm::GeneticAlgorithm(const vector<City*>& inputList) : masterList(
         } else {
             improvement = false;
         }
+        // Iteration results
         cout << "Iteration:\t\t" << ++iterCount << endl;
         cout << "Distance:\t\t" << iterDistance << endl;
         cout << "Best Distance:\t" << best_distance << endl;
@@ -41,19 +47,20 @@ GeneticAlgorithm::GeneticAlgorithm(const vector<City*>& inputList) : masterList(
         cout << "Improvement Over Base:\t" << (1 - (iterDistance / base_distance)) * 100 << "%" << endl;
         cout << endl;
     }
+    // Final report
     cout << "Number of iterations:\t" << iterCount << endl;
     cout << "Base distance:\t" << base_distance << endl;
     cout << "Best distance:\t" << best_distance << endl;
-    cout << "Achieved Improvement Factor?:\t" << boolalpha << (iterCount != 1000) << endl;
-    cout << "Base Route\t" << fittest->to_string() << endl;
-    cout << "Best Route\t" << pop.getFittest()->to_string() << endl;
-
-    // free all tour pointers in population
-    for(int i = 0; i < pop.getPopSize(); ++i) {
-        delete pop.getTour(i);
-    }
+    cout << "Achieved Improvement Factor?:\t" << boolalpha << (iterCount != ITERATIONS) << endl;
+    cout << "Base Route:\t" << fittest->to_string() << endl;
+    cout << "Best Route:\t" << pop->getFittest()->to_string() << endl;
 }
 
+/**
+ * Gets fittest parent in a subset of tours
+ * @param list subset of tours
+ * @return fittest parent in subset
+ */
 Tour* getFittestParent(vector<Tour*> list) {
     Tour* fittest = list[0];
     for(int i = 1; i < list.size(); ++i) {
@@ -115,15 +122,20 @@ Tour* GeneticAlgorithm::crossover(Population original) {
     return child;
 }
 
+/**
+ * Given a population of tours select a select few tours for a random chance to mutate.
+ * Mutation swaps adjacent cities and can happen for every single city in a mutated tour
+ * @param original population to mutate
+ */
 void GeneticAlgorithm::mutation(Population original) {
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<> mutateDist(1, original.getPopSize() - 1); // don't include elite tour in possible mutation
     uniform_real_distribution<> toursToMutate(0.25, 0.35); // choose 25-35% of the population to mutate
-    uniform_real_distribution<> randomMutationValue(0, 1); // don't include elite tour in possible mutation
-    uniform_real_distribution<> leftOrRight(0, 1); // don't include elite tour in possible mutation
+    uniform_real_distribution<> randomMutationValue(0, 1); // mutate tour if random value is under 0.15
+    uniform_int_distribution<> leftOrRight(0, 1); // choose to mutate with adjacent cities
 
-    int numOfMutations = original.getPopSize() * toursToMutate(gen);
+    int numOfMutations = (int)(original.getPopSize() * toursToMutate(gen));
 
     for(int i = 0; i < numOfMutations; ++i) {
         Tour* toMutate = original.getTour(mutateDist(gen)); // grab a random tour from population to mutate
@@ -151,5 +163,3 @@ void GeneticAlgorithm::mutation(Population original) {
         }
     }
 }
-
-

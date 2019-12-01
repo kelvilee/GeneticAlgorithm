@@ -3,20 +3,22 @@
 //
 
 #pragma once
+
 #include <string>
 #include <iostream>
 #include <cmath>
 
-//constexpr int MAP_BOUNDARY = 1000;
 using namespace std;
 
 struct City
 {
     string name;
-    int x, y;
+    int x = 0, y = 0;
     City() = default;
     City(string name, int x, int y) : name(name), x(x), y(y) { }
     double distanceTo(const City& dest);
     string to_string();
     bool operator == (const City& m) const;
+    City& operator=(City other);
+    friend void mySwap(City& first, City& second);
 };

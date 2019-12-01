@@ -3,20 +3,20 @@
 //
 
 #pragma once
+
 #include <vector>
 #include <random>
 
 #include "City.hpp"
 
-constexpr int CITIES_IN_TOUR = 10;
+constexpr int CITIES_IN_TOUR = 32;
 
 using namespace std;
 class Tour
 {
 private:
-    vector<City*> tour{CITIES_IN_TOUR, nullptr}; //list of cities
-    double fitness = 0;
-    double distance = 0;
+    vector<City*> tour{CITIES_IN_TOUR, nullptr};
+    double fitness = 0, distance = 0;
 
 public:
     Tour() = default;
@@ -28,4 +28,6 @@ public:
     double getDistance();
     string to_string();
     bool containsCity(const City* input);
+    Tour& operator=(Tour other);
+    friend void mySwap(Tour& first, Tour& second);
 };

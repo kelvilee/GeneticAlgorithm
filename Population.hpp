@@ -8,8 +8,7 @@
 #include <algorithm>
 #include <random>
 
-constexpr int POPULATION_SIZE = 10;
-constexpr int PARENT_POOL_SIZE = 5;
+constexpr int POPULATION_SIZE = 32;
 
 class Population
 {
