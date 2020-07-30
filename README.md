@@ -1,6 +1,6 @@
 
 # Traveling Salesperson Problem
-Object-oriented C++ implementation of the travelling salesman problem using a genetic algorithm  for COMP3522 Object Oriented Programming 2 at the British Columbia Institute of Technology
+Object-oriented C++ implementation of the travelling salesperson problem using a genetic algorithm  for COMP3522 Object Oriented Programming 2 at the British Columbia Institute of Technology
 
 ## Background
 Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city?
